@@ -5,7 +5,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
 @Slf4j
-public class TimeAdvice implements MethodInterceptor {
+public class TimeAdvice implements MethodInterceptor { // CGLIB 에 있는 것과 이름이 같으므로 주의
     @Override
     public Object invoke(MethodInvocation invocation) throws Throwable {
         log.info("TimeProxy 실행");
