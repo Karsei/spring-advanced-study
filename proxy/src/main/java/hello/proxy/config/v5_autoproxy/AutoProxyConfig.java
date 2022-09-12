@@ -25,11 +25,21 @@ public class AutoProxyConfig {
         return new DefaultPointcutAdvisor(pointcut, advice);
     }
 
-    @Bean
+//    @Bean
     public Advisor advisor2(LogTrace logTrace) {
         // Pointcut
         AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
         pointcut.setExpression("execution(* hello.proxy.app..*(..))");
+        // Advice
+        LogTraceAdvice advice = new LogTraceAdvice(logTrace);
+        return new DefaultPointcutAdvisor(pointcut, advice);
+    }
+
+    @Bean
+    public Advisor advisor3(LogTrace logTrace) {
+        // Pointcut
+        AspectJExpressionPointcut pointcut = new AspectJExpressionPointcut();
+        pointcut.setExpression("execution(* hello.proxy.app..*(..)) && !execution(* hello.proxy.app..noLog(..))");
         // Advice
         LogTraceAdvice advice = new LogTraceAdvice(logTrace);
         return new DefaultPointcutAdvisor(pointcut, advice);
