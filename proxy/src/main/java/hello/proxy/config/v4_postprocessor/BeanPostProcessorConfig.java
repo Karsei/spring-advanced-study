@@ -28,6 +28,6 @@ public class BeanPostProcessorConfig {
         pointcut.setMappedNames("request*", "order*", "save*");
         // Advice
         LogTraceAdvice advice = new LogTraceAdvice(logTrace);
-        return new DefaultPointcutAdvisor(advice);
+        return new DefaultPointcutAdvisor(pointcut, advice);
     }
 }
