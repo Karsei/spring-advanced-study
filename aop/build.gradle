@@ -1,0 +1,5 @@
+bootJar {
+    enabled(true)
+    archiveFileName = 'api3.jar'
+}
+jar.enabled(true)
