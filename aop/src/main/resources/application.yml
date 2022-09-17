@@ -1,0 +1,4 @@
+#spring:
+#  aop:
+#    # false 로 하면 JDK 동적으로 변경됨
+#    proxy-target-class: true
