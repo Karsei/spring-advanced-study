@@ -2,3 +2,8 @@
 #  aop:
 #    # false 로 하면 JDK 동적으로 변경됨
 #    proxy-target-class: true
+
+spring:
+  main:
+    # Spring Boot 2.6 부터 순환참조가 기본적으로 막혀서 풀어야 함
+    allow-circular-references: true
