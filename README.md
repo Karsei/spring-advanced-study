@@ -1,6 +1,6 @@
-# Spring-advanced-study
+# spring-advanced-study
 
-Spring 관련 심화 학습
+Spring 관련 심화 학습. 아래의 항목들을 알아두는 것을 목표로 한다.
 
 * ThreadLocal
 * 프록시 메서드 패턴, 전략 패턴, 프록시 콜백 패턴
